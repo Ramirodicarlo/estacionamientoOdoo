@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <!-- Vistas Mensualidad -->
+  <record id="estacionamiento_mensualidad_vista" model="ir.ui.view">
+      <field name="name">Lista de Abonos</field>
+      <field name="model">estacionamiento.mensualidad</field>
+      <field name="arch" type="xml">
+          <list string="Abonos">
+              <field name="id"/>
+              <field name="fecha_inicio"/>
+              <field name="fecha_vencimiento"/>
+              <field name="estado"/>
+              <field name="vehiculo_id"/>
+          </list>
+      </field>
+  </record>
+
+  <record id="estacionamiento_mensualidad_form" model="ir.ui.view">
+      <field name="name">Formulario de Mensualidad</field>
+      <field name="model">estacionamiento.mensualidad</field>
+      <field name="arch" type="xml">
+          <form string="Mensualidad">
+              <sheet>
+                  <group>
+                      <field name="id" readonly="1"/>
+                      <field name="fecha_inicio"/>
+                      <field name="fecha_vencimiento"/>
+                      <field name="estado"/>
+                      <field name="vehiculo_id"/>
+                  </group>
+              </sheet>
+          </form>
+      </field>
+  </record>
+
+  <!-- Acción Mensualidad -->
+  <record id="estacionamiento_mensualidad_accion" model="ir.actions.act_window">
+      <field name="name">Mensualidad</field>
+      <field name="res_model">estacionamiento.mensualidad</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="view_mode">list,form</field>
+  </record>
+
+  <!-- Menú Mensualidad -->
+  <menuitem id="estacionamiento_mensualidad_menu"
+    name="Mensualidad"
+    parent="estacionamiento_menu"
+    action="estacionamiento_mensualidad_accion"
+    sequence="5"
+  />
+</odoo>

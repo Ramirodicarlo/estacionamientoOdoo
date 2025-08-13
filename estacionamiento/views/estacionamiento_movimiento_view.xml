@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <!-- Vistas Movimiento -->
+  <record id="estacionamiento_movimiento_vista" model="ir.ui.view">
+      <field name="name">Lista de Movimientos</field>
+      <field name="model">estacionamiento.movimiento</field>
+      <field name="arch" type="xml">
+          <list string="Movimientos">
+              <field name="id"/>
+              <field name="fecha_ingreso"/>
+              <field name="fecha_salida"/>
+              <field name="estado"/>
+              <field name="lugar_id"/>
+              <field name="vehiculo_id"/>
+          </list>
+      </field>
+  </record>
+
+  <record id="estacionamiento_movimiento_form" model="ir.ui.view">
+      <field name="name">Formulario de Movimiento</field>
+      <field name="model">estacionamiento.movimiento</field>
+      <field name="arch" type="xml">
+          <form string="Movimiento">
+              <sheet>
+                  <group>
+                      <field name="fecha_ingreso"/>
+                      <field name="fecha_salida"/>
+                      <field name="estado"/>
+                      <field name="lugar_id"/>
+                      <field name="vehiculo_id" readonly="1"/>
+                  </group>
+              </sheet>
+          </form>
+      </field>
+  </record>
+
+  <!-- Acción Movimiento -->
+  <record id="estacionamiento_movimiento_accion" model="ir.actions.act_window">
+      <field name="name">Movimientos</field>
+      <field name="res_model">estacionamiento.movimiento</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="view_mode">list,form</field>
+  </record>
+
+  <!-- Menú Movimiento -->
+  <menuitem id="estacionamiento_movimiento_menu"
+    name="Movimientos"
+    parent="estacionamiento_menu"
+    action="estacionamiento_movimiento_accion"
+    sequence="3"
+  />
+</odoo>

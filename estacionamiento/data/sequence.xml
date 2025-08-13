@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+    <record id="sequence_estacionamiento_lugar" model="ir.sequence">
+      <field name="name">Estacionamiento Sequence</field>
+      <field name="code">estacionamiento.lugar.sequence</field>
+      <field name="prefix">EST-</field>
+      <field name="padding">5</field>
+    </record>
+  </data>
+</odoo>
