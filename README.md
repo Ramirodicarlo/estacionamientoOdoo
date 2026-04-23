@@ -49,23 +49,23 @@ estacionamiento/
 ├── init.py
 ├── manifest.py
 ├── data/
-│ └── sequence.xml
+└── sequence.xml
 ├── models/
-│ ├── init.py
-│ ├── estacionamiento_cliente.py
-│ ├── estacionamiento_lugar.py
-│ ├── estacionamiento_mensualidad.py
-│ ├── estacionamiento_movimiento.py
-│ └── estacionamiento_vehiculo.py
+├── init.py
+├── estacionamiento_cliente.py
+├── estacionamiento_lugar.py
+├── estacionamiento_mensualidad.py
+├── estacionamiento_movimiento.py
+└── estacionamiento_vehiculo.py
 ├── security/
-│ └── ir.model.access.csv
+└── ir.model.access.csv
 ├── static/
 ├── views/
-│ ├── estacionamiento_cliente_view.xml
-│ ├── estacionamiento_lugar_view.xml
-│ ├── estacionamiento_mensualidad_view.xml
-│ ├── estacionamiento_movimiento_view.xml
-│ └── estacionamiento_vehiculo_view.xml
+├── estacionamiento_cliente_view.xml
+├── estacionamiento_lugar_view.xml
+├── estacionamiento_mensualidad_view.xml
+├── estacionamiento_movimiento_view.xml
+└── estacionamiento_vehiculo_view.xml
 
 
 ## 🛠️ Technologies Used
